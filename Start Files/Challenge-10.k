@@ -14,3 +14,36 @@ Another special case you need to consider is that of a world that is only
 one column wide or one row high.
 */
 import "turns";
+function SolveChallenge(){
+	while(leftIsClear()){
+		infinitePattern();
+	}
+}
+
+function infinitePattern(){
+	putBeeper();
+	if(frontIsClear()){move();}
+	if(frontIsClear()){move();}
+	if(frontIsBlocked()){
+		if(facingEast()){turnWest();}
+		else {turnEast();}
+	}
+}
+
+
+
+function turnWest(){
+	turnLeft(); 
+	if(frontIsClear()){
+		move(); 
+	}
+	turnLeft();
+}
+
+function turnEast(){
+	turnRight();
+	if(frontIsClear()){
+		move();
+	}
+	turnRight();
+}
