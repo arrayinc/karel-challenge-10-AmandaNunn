@@ -22,10 +22,16 @@ function SolveChallenge(){
 
 function infinitePattern(){
 	putBeeper();
-	if(frontIsClear()){move();}
-	if(frontIsClear()){move();}
+	if(frontIsClear()){
+    move();
+  }
+	if(frontIsClear()){
+    move();
+  }
 	if(frontIsBlocked()){
-		if(facingEast()){turnWest();}
+		if(facingEast()){
+      turnWest();
+    }
 		else {turnEast();}
 	}
 }
@@ -33,9 +39,9 @@ function infinitePattern(){
 
 
 function turnWest(){
-	turnLeft(); 
+	turnLeft();
 	if(frontIsClear()){
-		move(); 
+		move();
 	}
 	turnLeft();
 }
